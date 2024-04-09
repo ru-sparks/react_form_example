@@ -73,7 +73,7 @@ const Form = () => {
             id="selectedOption"
             name="selectedOption"
             value={formData.selectedOption}
-      
+            onChange={handleChange}
           >
             <option value="">Select a country</option>
             {countries.map((country) => (
