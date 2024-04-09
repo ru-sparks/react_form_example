@@ -11,8 +11,18 @@ const Form = () => {
 
   const countries = ['USA', 'Canada', 'UK', 'Australia', 'Japan'];
 
+  // A generic change method that should work for form input fields
   const handleChange = (e) => {
+    // Use JavaScript to deconstruct the e.target object;
+    // name -> name of the input field
+    // value => update value
     const { name, value } = e.target;
+    // When used with call back function, the hook setFormData causes React state
+    // to invoke the callback with its current state (established by useState)
+
+    // Update data using the spread operator
+    // ...prevData: makes a shallow copy of 'prevData'
+    // [name]: value updates the 'name' property 
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
@@ -73,7 +83,7 @@ const Form = () => {
             id="selectedOption"
             name="selectedOption"
             value={formData.selectedOption}
-            onChange={handleChange}
+      
           >
             <option value="">Select a country</option>
             {countries.map((country) => (
@@ -83,7 +93,7 @@ const Form = () => {
             ))}
           </select>
         </div>
- 
+  
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
