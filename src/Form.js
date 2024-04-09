@@ -73,7 +73,7 @@ const Form = () => {
             id="selectedOption"
             name="selectedOption"
             value={formData.selectedOption}
-            onChange={handleChange}
+      
           >
             <option value="">Select a country</option>
             {countries.map((country) => (
@@ -83,20 +83,7 @@ const Form = () => {
             ))}
           </select>
         </div>
-        <div class="mb-3">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="html" name="fav_language" value="HTML" />
-              <label class="form-check-label" for="html">HTML</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="css" name="fav_language" value="CSS" />
-              <label class="form-check-label" for="css">CSS</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="javascript" name="fav_language" value="JavaScript" />
-              <label class="form-check-label" for="javascript">JavaScript</label>
-          </div>
-        </div>
+ 
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
